@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Hello, World!</title>
+    <style>
+        a {
+            color: dodgerblue;
+        }
+        body {
+            background-color: #000; /* Black background */
+            font-family: Arial, sans-serif;
+            margin: 0; /* Remove default margin */
+            padding: 20px; /* Add padding for better layout */
+            text-align: center; /* Center align content */
+        }
+        .input-container {
+            position: relative; /* For positioning the button inside the container */
+            width: 90%;
+            max-width: 400px;
+            margin: 10px auto;
+        }
+        .input-box {
+            background-color: #333; /* Dark background color */
+            color: #fff; /* White text color */
+            border: none;
+            padding: 12px;
+            padding-right: 50px; /* Space for the button */
+            width: 100%; /* Full width */
+            box-sizing: border-box;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .input-box::placeholder {
+            color: #bbb; /* Lighter gray for placeholder text */
+        }
+        img {
+            max-width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            margin: 10px 0; /* Add spacing around images */
+        }
+        .show-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            color: #fff; /* Change text color to white */
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://assets.onecompiler.app/42tmq6jud/3ww47radw/1000096232.jpg" alt="Image 1">
+    
+    <a href="https://www.facebook.com/">
+        <img src="https://assets.onecompiler.app/42tmq6jud/3ww47radw/1000096237.jpg" alt="Facebook Logo">
+    </a>
+
+    <img src="https://assets.onecompiler.app/42tmq6jud/3ww47radw/1000096240.jpg" alt="Image 2">
+
+    <input type="text" class="input-box" placeholder="Phone number, username or email address">
+    
+    <div class="input-container">
+        <input type="password" id="password" class="input-box" placeholder="Password">
+        <button class="show-btn" onclick="togglePassword()">Show</button>
+    </div>
+
+    <a href="https://www.instagram.com/accounts/password/reset/" style="float:right;text-decoration: none;">Forgotten your password?</a>
+    
+    <img src="https://assets.onecompiler.app/42tmq6jud/3ww47radw/1000096248.jpg">
+
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            var showButton = document.querySelector(".show-btn");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                showButton.textContent = "Hide";
+            } else {
+                passwordField.type = "password";
+                showButton.textContent = "Show";
+            }
+        }
+    </script>
+
+</body>
+</html>
